@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="AddNew" Height="300" Width="300">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" Text="256" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Content="N:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <Label Content="f [Hz]:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TextChanged="TextBox_TextChanged" Text="16"/>
+        <Label Content="A:" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <Label Content="d:" HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="3"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="3"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="207,192,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Close" HorizontalAlignment="Left" Margin="207,232,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="x[n]:" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <Label Content="fs [Hz]:" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Height="23" Width="79" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="94,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="A*sin(w*(n-d))"/>
+        <Image HorizontalAlignment="Left" Height="74" Margin="10,185,0,0" VerticalAlignment="Top" Width="180"/>
+
     </Grid>
 </Window>
