@@ -55,7 +55,7 @@
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Reality";
+            series1.Name = "Real";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(903, 260);
             this.chart1.TabIndex = 0;
