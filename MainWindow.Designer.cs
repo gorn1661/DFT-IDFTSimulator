@@ -30,10 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.load = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAll = new System.Windows.Forms.ToolStripMenuItem();
             this.exit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.addItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +41,8 @@
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem15 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.expressionTB = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.wTB = new System.Windows.Forms.TextBox();
             this.aTB = new System.Windows.Forms.TextBox();
             this.nTB = new System.Windows.Forms.TextBox();
@@ -86,46 +84,17 @@
             this.toolStripMenuItem13});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1015, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(806, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.load,
-            this.toolStripMenuItem3,
             this.exit});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(68, 24);
             this.toolStripMenuItem1.Text = "System";
-            // 
-            // load
-            // 
-            this.load.Name = "load";
-            this.load.Size = new System.Drawing.Size(135, 26);
-            this.load.Text = "Wczytaj";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.saveItem,
-            this.saveAll});
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(135, 26);
-            this.toolStripMenuItem3.Text = "Zapisz";
-            // 
-            // saveItem
-            // 
-            this.saveItem.Name = "saveItem";
-            this.saveItem.Size = new System.Drawing.Size(189, 26);
-            this.saveItem.Text = "Zapisz obiekt";
-            // 
-            // saveAll
-            // 
-            this.saveAll.Name = "saveAll";
-            this.saveAll.Size = new System.Drawing.Size(189, 26);
-            this.saveAll.Text = "Zapisz wszystko";
             // 
             // exit
             // 
@@ -149,35 +118,35 @@
             // addItem
             // 
             this.addItem.Name = "addItem";
-            this.addItem.Size = new System.Drawing.Size(181, 26);
+            this.addItem.Size = new System.Drawing.Size(173, 26);
             this.addItem.Text = "Dodaj wykres";
             this.addItem.Click += new System.EventHandler(this.addItem_Click);
             // 
             // addition
             // 
             this.addition.Name = "addition";
-            this.addition.Size = new System.Drawing.Size(181, 26);
+            this.addition.Size = new System.Drawing.Size(173, 26);
             this.addition.Text = "Dodaj";
             this.addition.Click += new System.EventHandler(this.addition_Click);
             // 
             // subtraction
             // 
             this.subtraction.Name = "subtraction";
-            this.subtraction.Size = new System.Drawing.Size(181, 26);
+            this.subtraction.Size = new System.Drawing.Size(173, 26);
             this.subtraction.Text = "Odejmij";
             this.subtraction.Click += new System.EventHandler(this.subtraction_Click);
             // 
             // multiplication
             // 
             this.multiplication.Name = "multiplication";
-            this.multiplication.Size = new System.Drawing.Size(181, 26);
+            this.multiplication.Size = new System.Drawing.Size(173, 26);
             this.multiplication.Text = "Mnóż";
             this.multiplication.Click += new System.EventHandler(this.multiplication_Click);
             // 
             // division
             // 
             this.division.Name = "division";
-            this.division.Size = new System.Drawing.Size(181, 26);
+            this.division.Size = new System.Drawing.Size(173, 26);
             this.division.Text = "Dziel";
             this.division.Click += new System.EventHandler(this.division_Click);
             // 
@@ -206,6 +175,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.expressionTB);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.wTB);
             this.panel1.Controls.Add(this.aTB);
             this.panel1.Controls.Add(this.nTB);
@@ -214,11 +185,27 @@
             this.panel1.Controls.Add(this.n);
             this.panel1.Controls.Add(this.back);
             this.panel1.Controls.Add(this.add);
-            this.panel1.Location = new System.Drawing.Point(12, 31);
+            this.panel1.Location = new System.Drawing.Point(6, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 389);
             this.panel1.TabIndex = 1;
             this.panel1.Visible = false;
+            // 
+            // expressionTB
+            // 
+            this.expressionTB.Location = new System.Drawing.Point(312, 203);
+            this.expressionTB.Name = "expressionTB";
+            this.expressionTB.Size = new System.Drawing.Size(200, 22);
+            this.expressionTB.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(221, 206);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Wzór";
             // 
             // wTB
             // 
@@ -247,7 +234,7 @@
             // w
             // 
             this.w.AutoSize = true;
-            this.w.Location = new System.Drawing.Point(224, 154);
+            this.w.Location = new System.Drawing.Point(218, 154);
             this.w.Name = "w";
             this.w.Size = new System.Drawing.Size(25, 17);
             this.w.TabIndex = 4;
@@ -346,7 +333,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(12, 31);
+            this.panel2.Location = new System.Drawing.Point(12, 28);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(780, 389);
             this.panel2.TabIndex = 3;
@@ -397,7 +384,7 @@
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Location = new System.Drawing.Point(9, 28);
+            this.panel3.Location = new System.Drawing.Point(9, 25);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(780, 389);
             this.panel3.TabIndex = 4;
@@ -461,15 +448,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 452);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(806, 429);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelDFT);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panelDFT);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Okno główne";
+            this.Text = "Wyznaczanie DFT i IDFT";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -489,10 +476,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem load;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem saveItem;
-        private System.Windows.Forms.ToolStripMenuItem saveAll;
         private System.Windows.Forms.ToolStripMenuItem exit;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem addItem;
@@ -529,6 +512,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox expressionTB;
+        private System.Windows.Forms.Label label4;
     }
 }
 

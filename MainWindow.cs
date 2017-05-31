@@ -19,6 +19,7 @@ namespace dft
         public Form1()
         {
             InitializeComponent();
+            expressionTB.Text = "A*Math.sin(W*N)";
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -46,12 +47,27 @@ namespace dft
 
         private void add_Click(object sender, EventArgs e)
         {
+            Type scriptType = Type.GetTypeFromCLSID(Guid.Parse("0E59F1D5-1FBE-11D0-8FF2-00A0D10038BC"));
+
+            dynamic obj = Activator.CreateInstance(scriptType, false);
+            obj.Language = "javascript";
+
             double[] tabN = new double[int.Parse(nTB.Text)];
+            string A = "A=" + aTB.Text + ";";
+            string W = "W=" + wTB.Text + ";";
+
             for(int i = 0; i < tabN.Length; i++)
-            {
-                tabN[i] = (int.Parse(aTB.Text)) * Math.Sin((int.Parse(wTB.Text)) * i);
-            }
-            if(tableItems.Length == 1)
+                try
+                {
+                    string N = "N=" + i + ";";
+                    tabN[i] = obj.Eval(N + A + W + expressionTB.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Expression error");
+                }
+                
+            if (tableItems.Length == 1)
             {
                 tableItems = new GraphItem[tableItems.Length + 1];
                 tableItems[0] = new GraphItem(tabN);
@@ -71,7 +87,7 @@ namespace dft
             }
             tableItems[tableItems.Length - 2].Show();
             chooseGraph.Items.Add(tableItems[tableItems.Length - 2].Text);
-            comboBox1.Items.Add(tableItems[tableItems.Length - 2].Text);
+            //comboBox1.Items.Add(tableItems[tableItems.Length - 2].Text);
             comboBox2.Items.Add(tableItems[tableItems.Length - 2].Text);
             comboBox3.Items.Add(tableItems[tableItems.Length - 2].Text);
         }
@@ -321,7 +337,7 @@ namespace dft
                 }
                 tableItems[tableItems.Length - 2].Show();
                 chooseGraph.Items.Add(tableItems[tableItems.Length - 2].Text);
-                comboBox1.Items.Add(tableItems[tableItems.Length - 2].Text);
+                //comboBox1.Items.Add(tableItems[tableItems.Length - 2].Text);
                 comboBox2.Items.Add(tableItems[tableItems.Length - 2].Text);
                 comboBox3.Items.Add(tableItems[tableItems.Length - 2].Text);
 
